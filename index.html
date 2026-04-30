@@ -34,7 +34,6 @@
 </head>
 
 <body>
-
     <!-- Navbar section -->
 
     <header>
@@ -86,8 +85,6 @@
             </div>
         </div>
     </header>
-
-
     <!-- Banner Section -->
 
     <section class="w-11/12 flex flex-col-reverse md:flex-row gap-5 items-center justify-between mx-auto mb-20">
@@ -138,7 +135,7 @@
                     <input id="input-search" type="text" placeholder="Search vocabulary" required />
                 </label>
             </div>
-            <button  id="btn-search" class="btn btn-primary join-item">Seach</button>
+            <button id="btn-search" class="btn btn-primary join-item">Seach</button>
         </div>
     </section>
 
@@ -151,7 +148,7 @@
         <span class="loading loading-bars loading-xl"></span>
     </section>
 
-    <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5">
+    <section id="word-container" class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-1 md:grid-cols-3 gap-5">
 
         <div class="text-center col-span-full rounded-xl py-10 space-y-5 font-bangla">
             <p class="text-xl font-medium text-gray-400">আপনি এখনো কোন Lesson Select করেন নি</p>
@@ -160,10 +157,7 @@
 
     </section>
 
-
     <section>
-        <!-- Open the modal using ID.showModal() method -->
-        <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
         <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
                 <div id="details-container" class="space-y-5">
@@ -171,13 +165,119 @@
                 </div>
                 <div class="modal-action">
                     <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
                         <button class="btn">Close</button>
                     </form>
                 </div>
             </div>
         </dialog>
     </section>
+
+    <section class="w-11/12 mx-auto my-20">
+        <h1 class="text-4xl font-bold text-center mb-10">
+            <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h1>
+
+        <div class="space-y-4 max-w-3xl mx-auto">
+
+            <div class="collapse collapse-plus bg-white shadow-sm rounded-xl">
+                <input type="radio" name="faq-accordion" checked />
+                <div class="collapse-title text-lg font-semibold">
+                    How can I start learning English on this website?
+                </div>
+                <div class="collapse-content text-gray-600">
+                    You can start by exploring beginner lessons, interactive exercises,
+                    and structured courses step by step.
+                </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-white shadow-sm rounded-xl">
+                <input type="radio" name="faq-accordion" />
+                <div class="collapse-title text-lg font-semibold">
+                    Is this website free to use?
+                </div>
+                <div class="collapse-content text-gray-600">
+                    Yes, most features are free. Some advanced features may require registration.
+                </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-white shadow-sm rounded-xl">
+                <input type="radio" name="faq-accordion" />
+                <div class="collapse-title text-lg font-semibold">
+                    Do I need to create an account?
+                </div>
+                <div class="collapse-content text-gray-600">
+                    Not required, but recommended to track your progress.
+                </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-white shadow-sm rounded-xl">
+                <input type="radio" name="faq-accordion" />
+                <div class="collapse-title text-lg font-semibold">
+                    How can I build my English vocabulary?
+                </div>
+                <div class="collapse-content text-gray-600">
+                    Practice daily with lessons, examples, and quizzes.
+                </div>
+            </div>
+
+            <div class="collapse collapse-plus bg-white shadow-sm rounded-xl">
+                <input type="radio" name="faq-accordion" />
+                <div class="collapse-title text-lg font-semibold">
+                    Do you offer certificates?
+                </div>
+                <div class="collapse-content text-gray-600">
+                    Not yet, but it may be added later.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-base-200 shadow-sm mt-20">
+        <div class="w-11/12 mx-auto py-10 flex flex-col md:flex-row justify-between items-center gap-8">
+
+
+            <div class="text-center md:text-left space-y-2">
+                <div class="flex items-center justify-center md:justify-start gap-2">
+                    <span class="text-lg font-bold">English</span>
+                    <img src="./assets/logo.png" class="w-8" />
+                    <span class="font-bangla text-lg font-semibold">জানালা</span>
+                </div>
+
+                <p class="font-bangla text-gray-600">
+                    ইংরেজি শিখুন সহজে
+                </p>
+
+                <p class="text-sm text-gray-400">
+                    Acro Applications since 2025
+                </p>
+            </div>
+
+            <div class="text-center">
+                <p class="font-semibold mb-3">Follow us</p>
+                <div class="flex gap-5 text-xl justify-center text-gray-600">
+
+                    <a class="hover:text-[#00BCFF] transition">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a class="hover:text-[#00BCFF] transition">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a class="hover:text-[#00BCFF] transition">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a class="hover:text-[#00BCFF] transition">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
     <script src="./script/index.js"></script>
 

@@ -4,6 +4,11 @@ const createElements = (arr) =>{
 
 };
 
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; 
+  window.speechSynthesis.speak(utterance);
+};
 
 const manageSpinner=(status)=>{
 
@@ -115,7 +120,7 @@ const displayLevelWord = (words) => {
             <div class="font-bangla font-medium text-xl">${word.meaning ? word.meaning : "No meaning Available"}/${word.pronunciation ? word.pronunciation : "No pronunciation find"}</div>
             <div class="flex justify-between items-center">
                 <button onclick="loadWordDetail(${word.id})" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF60]"><i class="fa-solid fa-circle-info"></i></button>   
-                <button class="btn bg-[#1A91FF10] hover:bg-[#1A91FF60]"><i class="fa-solid fa-volume-high"></i></button>
+                <button onclick="pronounceWord('${word.word}')" class="btn bg-[#1A91FF10] hover:bg-[#1A91FF60]"><i class="fa-solid fa-volume-high"></i></button>
             </div>
         </div>
         `;
